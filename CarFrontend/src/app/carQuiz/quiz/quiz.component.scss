@@ -1,0 +1,179 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  .form {
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    max-width: 400px;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    min-height: 300px;
+    .card {
+      padding: 20px;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .quiz-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+        .quiz-button {
+          width: 150px;
+          padding: 5px;
+          margin: 10px;
+        }
+      }
+      button {
+        width: min-content;
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-family: sans-serif;
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+      }
+      label {
+        margin: inherit;
+        font-family: sans-serif;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #444;
+
+      }
+
+      button {
+        border: 1px solid #444444;
+        background-color: transparent;
+        width: 100px;
+        border-radius: 5px;
+        padding: 10px;
+        &:hover {
+          border: red 1px solid;
+          color: red;
+        }
+      }
+      .quiz-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .quiz-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+          .quiz-button {
+            width: 150px;
+            padding: 5px;
+            margin: 10px;
+          }
+        }
+      }
+    }
+
+  }
+  .scoreboard-list {
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    button {
+
+      border: 1px solid #444444;
+      background-color: transparent;
+      width: 100px;
+      border-radius: 5px;
+      padding: 10px;
+      &:hover {
+        border: #007bff 1px solid;
+        color: #007bff;
+      }
+    }
+    .eldenlord {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      width: 100%;
+
+      label {
+        margin: auto;
+      }
+    }
+
+    .scoreboard-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+    }
+
+    .scoreboard-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      background: var(--card-background-color);
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--accent-color);
+      }
+
+      .scoreboard-position {
+
+        margin-right: 1rem;
+      }
+
+      .scoreboard-username, .scoreboard-time, .scoreboard-points {
+
+      }
+    }
+
+  }
+  .user-time {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 10px;
+    div {
+      display: flex;
+      align-items: center;
+      font-family: sans-serif;
+      justify-content: space-around;
+      h3 {
+        padding: 10px;
+      }
+    }
+  }
+
+}
